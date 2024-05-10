@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjWebCsEntityFrameworkAdo", "prjWebCsEntityFrameworkAdo\prjWebCsEntityFrameworkAdo.csproj", "{CC4F573F-31F3-467E-A3D3-1BDC496C0F2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC4F573F-31F3-467E-A3D3-1BDC496C0F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4F573F-31F3-467E-A3D3-1BDC496C0F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4F573F-31F3-467E-A3D3-1BDC496C0F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4F573F-31F3-467E-A3D3-1BDC496C0F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25B962A9-6EE0-4B3B-9BDA-1E682166BCE4}
+	EndGlobalSection
+EndGlobal

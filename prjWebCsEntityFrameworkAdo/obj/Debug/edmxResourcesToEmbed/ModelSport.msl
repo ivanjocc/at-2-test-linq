@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSportModelStoreContainer" CdmEntityContainer="DBSportEntities1">
+    <EntitySetMapping Name="Equipes">
+      <EntityTypeMapping TypeName="DBSportModel.Equipe">
+        <MappingFragment StoreEntitySet="Equipes">
+          <ScalarProperty Name="RefEquipe" ColumnName="RefEquipe" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="Coach" ColumnName="Coach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Joueurs">
+      <EntityTypeMapping TypeName="DBSportModel.Joueur">
+        <MappingFragment StoreEntitySet="Joueurs">
+          <ScalarProperty Name="RefJoueur" ColumnName="RefJoueur" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Poste" ColumnName="Poste" />
+          <ScalarProperty Name="Salaire" ColumnName="Salaire" />
+          <ScalarProperty Name="Naissance" ColumnName="Naissance" />
+          <ScalarProperty Name="ReferEquipe" ColumnName="ReferEquipe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

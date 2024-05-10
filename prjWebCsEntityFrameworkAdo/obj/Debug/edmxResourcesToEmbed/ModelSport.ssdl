@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSportModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Equipes">
+    <Key>
+      <PropertyRef Name="RefEquipe" />
+    </Key>
+    <Property Name="RefEquipe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+    <Property Name="Budget" Type="money" />
+    <Property Name="Coach" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Joueurs">
+    <Key>
+      <PropertyRef Name="RefJoueur" />
+    </Key>
+    <Property Name="RefJoueur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" />
+    <Property Name="Poste" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salaire" Type="money" />
+    <Property Name="Naissance" Type="datetime" />
+    <Property Name="ReferEquipe" Type="int" />
+  </EntityType>
+  <Association Name="FK_Joueurs_Equipes">
+    <End Role="Equipes" Type="Self.Equipes" Multiplicity="0..1" />
+    <End Role="Joueurs" Type="Self.Joueurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipes">
+        <PropertyRef Name="RefEquipe" />
+      </Principal>
+      <Dependent Role="Joueurs">
+        <PropertyRef Name="ReferEquipe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBSportModelStoreContainer">
+    <EntitySet Name="Equipes" EntityType="Self.Equipes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Joueurs" EntityType="Self.Joueurs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Joueurs_Equipes" Association="Self.FK_Joueurs_Equipes">
+      <End Role="Equipes" EntitySet="Equipes" />
+      <End Role="Joueurs" EntitySet="Joueurs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
